@@ -7,10 +7,12 @@ body {
 
 h1 {
     font-size: 30px;
+    text-align: center;
 }
 
 h2 {
     font-size: 25px;
+    text-align: center;
 }
 
 h3 {
@@ -21,7 +23,8 @@ p {
     font-size: 13px;
     margin: 0px;
     padding: 0px;
-    color: #8F8F8B
+    color: #8f8f8b;
+    text-align: center;
 }
 
 .flex-column {
@@ -55,14 +58,14 @@ p {
 .hero-container {
     min-height: 500px;
     height: 90vh;
-    background: rgb(28,28,28);
+    background: rgb(28, 28, 28);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .landing-hero__container {
-    color: #F4F4F4;
+    color: #f4f4f4;
     justify-content: center;
     align-items: center;
     margin: 4rem;
@@ -70,7 +73,7 @@ p {
 
 .banner-container {
     padding: 4rem;
-    background-color: #E4E5E6;
+    background-color: #e4e5e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,10 +107,10 @@ p {
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
-    width: 199px; 
+    width: 100%;
 }
 
-.Backdrop {
+.backdrop {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -120,9 +123,9 @@ p {
 .common-button:hover {
     background-color: #159f9e;
     border: 1px solid #159f9e;
-    transform: translateY(-.25rem);
+    transform: translateY(-0.25rem);
     transition-timing-function: ease;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .slide-drawer {
@@ -146,10 +149,16 @@ p {
 
 .modal {
     position: fixed;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
     z-index: 500;
+    width: 500px;
+    height: 300px;
     top: 25%;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
 }
 
 .slide-drawer-open {
@@ -184,13 +193,14 @@ p {
     z-index: 1114;
     right: 1px;
     margin-top: -10px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .logo:hover {
     color: #159f9e;
     cursor: pointer;
 }
+
 .close:hover:before,
 .close:hover:after {
     background: #159f9e;
@@ -205,7 +215,7 @@ p {
     top: 50%;
     left: 0;
     margin-top: -1px;
-    background: #000; 
+    background: #000;
 }
 
 .close:before {
@@ -217,27 +227,115 @@ p {
 }
 
 .panel {
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-@media(min-width: 630px) {
+.panel-square {
+    background: #8f8f8b;
+    height: 400px;
+    width: 100%;
+}
 
+.panel-copy {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.panel-copy div {
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.storycard-container {
+    height: 100%;
+    margin: 16px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.story-list {
+    padding: 2rem;
+}
+
+story-list__cards {
+    display: flex;
+    overflow-x: auto;
+}
+.storycard-container h3 {
+    padding-top: 16px;
+    margin: 0 16px;
+}
+
+.storycard-square {
+    background: #8f8f8b;
+    height: 250px;
+}
+
+.storycard-header {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    align-items: center;
+}
+
+.storycard-circle {
+    width: 40px;
+    height: 40px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.auth {
+    text-align: center;
+}
+
+.auth input {
+    height: 35px;
+    background-color: #f4f4f4;
+    border: 1px solid #e4e5e6;
+}
+
+.auth input:focus {
+    outline: none;
+}
+
+.auth button {
+    margin-top: 14px;
+}
+
+.storylist-container {
+    width: 100%;
+    overflow: scroll;
+}
+
+@media (min-width: 630px) {
     h1 {
         font-size: 40px;
+        text-align: start;
     }
 
     h2 {
         font-size: 30px;
+        text-align: start;
     }
 
     h3 {
         font-size: 25px;
+        text-align: start;
     }
 
     p {
         font-size: 15px;
+        text-align: start;
     }
 
     .landing-hero__container {
@@ -250,9 +348,14 @@ p {
     }
 
     .panel {
-        height: 400px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .panel-copy {
+        width: 50%;
+    }
+    .panel-square {
+        width: 50%;
     }
 }
