@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Hero from '../components/Hero';
+import StoryList from '../components/StoryList';
 
 const Stories = () => {
     return (
-        <div>
+        <Fragment>
             <Hero>
                 <h1
                     style={{
@@ -15,7 +16,11 @@ const Stories = () => {
                     Stories
                 </h1>
             </Hero>
-        </div>
+            <div className='storylist-container'>
+                <StoryList title={'Latest'} />
+                <StoryList title={"Editor's Picks"} />
+            </div>
+        </Fragment>
     );
 };
 
