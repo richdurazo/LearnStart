@@ -1,4 +1,7 @@
 # LearnStart
+
+[Link to working Demo](http://learn-start.s3-website-us-west-2.amazonaws.com/#/)
+
 ## Available Scripts
 
 In the project directory, you can run:
